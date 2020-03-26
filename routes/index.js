@@ -3,23 +3,23 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('index', { title: 'index' });
+    res.render('index', { title: 'index', specialPage: "https://www.page1book.com/" });
 });
 
 router.get('/page2', function(req, res, next) {
-    res.render('page2', { title: 'page2' });
+    res.render('page2', { title: 'page2', specialPage: "http://www.jamaicaobserver.com/page2/"});
 });
 
 router.get('/page3', function(req, res, next) {
-    res.render('index', { title: 'page3' });
+    res.render('index', { title: 'page3', specialPage : "https://www.thesun.co.uk/topic/page-3/" });
 });
 
 router.get('/page4', function(req, res, next) {
-    res.render('index', { title: 'page4' });
+    res.render('index', { title: 'page4', specialPage : "https://perezhilton.com/page/4/" });
 });
 
-router.get('/page5', function(req, res, next) {
-    res.render('index', { title: 'page4' });
+router.get('/page6', function(req, res, next) {
+    res.render('index', { title: 'page6', specialPage : "https://pagesix.com/" });
 });
 
 router.get("/errored-page", function(req, res, next) {
@@ -42,7 +42,7 @@ router.get("/temporary-redirect-to-error-page", function(req, res, next) {
 
 router.get("/created", function(req, res, next) {
     res.status(201);
-    res.render("index", {title : 'created'});
+    res.render("index", {title : 'created', specialPage : "https://www.dictionary.com/browse/created"});
 });
 
 
